@@ -8,6 +8,20 @@ Se utilizan 3 bases de datos diferentes que tienen que ser creadas previo al uso
 * db_profesores
 * db_matriculas
 
+en mysql workbench ejecutar estos querys:
+CREATE DATABASE IF NOT EXISTS db_estudiantes;
+CREATE DATABASE IF NOT EXISTS db_profesores;
+CREATE DATABASE IF NOT EXISTS db_matriculas;
+
+CREATE USER IF NOT EXISTS 'app'@'localhost' IDENTIFIED BY 'app123';
+GRANT ALL PRIVILEGES ON db_estudiantes.* TO 'app'@'localhost';
+GRANT ALL PRIVILEGES ON db_profesores.*  TO 'app'@'localhost';
+GRANT ALL PRIVILEGES ON db_matriculas.*  TO 'app'@'localhost';
+FLUSH PRIVILEGES;
+
+
+
+
 ademas de cambiar los datos correspondientes al usuario y contraseña de la base de datos en cada archivo .env
 que se encuentran en 
 
