@@ -15,8 +15,8 @@ app.use(
   createProxyMiddleware({
     target: "http://localhost:8081",
     changeOrigin: true,
-    // reenviamos la URL original completa (incluye /api/estudiantes y /:id)
-    pathRewrite: (path, req) => req.originalUrl,
+    // path llega como "/" o "/123", lo convertimos a "/api/estudiantes/" o "/api/estudiantes/123"
+    pathRewrite: (path) => `/api/estudiantes${path}`,
   })
 );
 
@@ -26,7 +26,7 @@ app.use(
   createProxyMiddleware({
     target: "http://localhost:8082",
     changeOrigin: true,
-    pathRewrite: (path, req) => req.originalUrl,
+    pathRewrite: (path) => `/api/profesores${path}`,
   })
 );
 
@@ -36,7 +36,7 @@ app.use(
   createProxyMiddleware({
     target: "http://localhost:8083",
     changeOrigin: true,
-    pathRewrite: (path, req) => req.originalUrl,
+    pathRewrite: (path) => `/api/matriculas${path}`,
   })
 );
 

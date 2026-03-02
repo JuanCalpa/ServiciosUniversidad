@@ -1,0 +1,20 @@
+link de la coleccion de endpoints completos en postman:
+https://juancalpa-91649c41-1611231.postman.co/workspace/Juan-Calpa's-Workspace~00342703-08dd-4d60-84b7-d1e23dce1277/collection/52042815-e3134a6b-0580-41a2-bd6a-1acf4157fc67?action=share&creator=52042815
+
+
+
+Se utilizan 3 bases de datos diferentes que tienen que ser creadas previo al uso de la aplicacion:
+* db_estudiantes
+* db_profesores
+* db_matriculas
+
+ademas de cambiar los datos correspondientes al usuario y contraseña de la base de datos en cada archivo .env
+que se encuentran en 
+
+* services/estudiantes/.env
+* services/matriculas/.env
+* services/profesores/.env
+
+
+
+igualmente iniciar npm en cada carpeta que sea necesario
